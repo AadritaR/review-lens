@@ -4,6 +4,7 @@ __pycache__/
 data/reviews-raw.csv
 data/sample_reviews.csv
 models/distilbert_sentiment/model.safetensors
-*.pkl
+models/distilbert_test_data.pkl
+models/data_splits.pkl
 .streamlit/
 upload_model.py
