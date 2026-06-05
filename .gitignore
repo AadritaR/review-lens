@@ -6,3 +6,4 @@ data/sample_reviews.csv
 models/distilbert_sentiment/model.safetensors
 *.pkl
 .streamlit/
+upload_model.py
