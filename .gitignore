@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+data/reviews-raw.csv
+data/sample_reviews.csv
+models/distilbert_sentiment/model.safetensors
+*.pkl
+.streamlit/
