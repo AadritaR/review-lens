@@ -13,7 +13,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.preprocess import clean_text, split_into_sentences, LABEL_NAMES
 
-MODEL_DIR = "models/distilbert_sentiment"
+MODEL_DIR = "Aadritaray/review-lens-sentiment"
 
 # Aspect Keywords
 
