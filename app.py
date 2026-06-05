@@ -126,7 +126,7 @@ def load_analyzer():
         return None
 
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
+# Helpers
 
 ASPECT_ICONS = {
     'Quality': '🔧', 'Price': '💰',
@@ -159,12 +159,12 @@ def aspect_row(aspect, sentiment):
     </div>""", unsafe_allow_html=True)
 
 
-# ── Header ────────────────────────────────────────────────────────────────────
+# Header
 
 st.markdown('<div class="app-title">🔍 Review Lens</div>', unsafe_allow_html=True)
 st.markdown('<div class="app-sub">Aspect-Based Sentiment Analysis · TF-IDF + LR vs DistilBERT</div>', unsafe_allow_html=True)
 
-# ── Samples ───────────────────────────────────────────────────────────────────
+# Samples
 
 SAMPLES = {
     "Select a sample...": "",
@@ -227,7 +227,7 @@ if not review_text.strip():
     st.warning("Please enter a review.")
     st.stop()
 
-# ── Run Models ────────────────────────────────────────────────────────────────
+# Run Models
 
 baseline_result   = None
 distilbert_result = None
@@ -248,7 +248,7 @@ with st.spinner("Analyzing..."):
 
 st.markdown("---")
 
-# ── Results ───────────────────────────────────────────────────────────────────
+# Results
 
 main = distilbert_result or baseline_result
 if not main:
@@ -287,7 +287,7 @@ with col2:
                 f'<div class="disagree-badge">⚠️ Models disagree — trust DistilBERT</div>',
                 unsafe_allow_html=True)
 
-# ── Aspect Breakdown ──────────────────────────────────────────────────────────
+# Aspect Breakdown
 
 if aspect_analysis:
     st.markdown("---")
@@ -304,7 +304,7 @@ if aspect_analysis:
                     st.write(f"**Aspects:** {', '.join(s['aspects'])}")
                     st.write(f"**Sentiment:** {s['sentiment']} ({s.get('confidence',0):.0%})")
 
-# ── Footer metrics ────────────────────────────────────────────────────────────
+# Footer metrics
 
 st.markdown("---")
 st.markdown('<div class="section-label">Model performance · test set (100k reviews)</div>', unsafe_allow_html=True)
