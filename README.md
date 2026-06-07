@@ -35,20 +35,20 @@ Tested on 10,000 held-out reviews from a balanced 100,000-review training set.
 
 ## Project Structure
 
+```text
 review-lens/
 ├── data/
-│ └── sample_reviews.csv
+│   └── sample_reviews.csv          ← 100k balanced subset
 ├── src/
-│ ├── preprocess.py
-│ ├── data_loader.py
-│ ├── baseline_model.py
-│ ├── dataset.py
-│ ├── train.py
-│ ├── evaluate.py
-│ └── aspect_sentiment.py
-├── models/
-├── results/
-├── app.py
+│   ├── preprocess.py               ← text cleaning pipeline
+│   ├── data_loader.py              ← sampling + label mapping
+│   ├── baseline_model.py           ← TF-IDF + Logistic Regression
+│   ├── dataset.py                  ← PyTorch Dataset class
+│   ├── train.py                    ← DistilBERT fine-tuning
+│   ├── evaluate.py                 ← metrics + confusion matrix
+│   └── aspect_sentiment.py         ← aspect-based analysis
+├── models/                         ← trained model weights
+├── results/                        ← confusion matrices, comparison charts
+├── app.py                          ← Streamlit app
 └── requirements.txt
-
----
+```
